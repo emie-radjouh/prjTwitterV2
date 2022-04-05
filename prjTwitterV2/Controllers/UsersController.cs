@@ -54,7 +54,7 @@ namespace prjTwitterV2
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Username,Password,Email")] User user)
+        public async Task<IActionResult> Create([Bind("Username,Password,Email,Phone,Banner,Avatar,Name,Bio,Location,Website,Month,Day,Year")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace prjTwitterV2
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Username,Password,Email")] User user)
+        public async Task<IActionResult> Edit(string id, [Bind("Username,Password,Email,Phone,Banner,Avatar,Name,Bio,Location,Website,Month,Day,Year")] User user)
         {
             if (id != user.Username)
             {
